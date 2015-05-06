@@ -17,10 +17,10 @@ class GoogleDirections
     :mode => :driving,
   }
 
-  def initialize(origin, destination, opts=@@default_options)
+  def initialize(origin, destination, opts={})
     @origin = origin
     @destination = destination
-    @options = opts.merge({:origin => @origin, :destination => @destination})
+    @options = @@default_options.merge({:origin => @origin, :destination => @destination})
 
     @url = @@base_url + '?' + @options.to_query
     @xml = open(@url).read
