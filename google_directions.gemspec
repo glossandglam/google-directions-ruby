@@ -3,11 +3,11 @@
 
 Gem::Specification.new do |s|
   s.name = "google_directions"
-  s.version = "0.1.6.2"
+  s.version = "0.1.6.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
-  s.authors = ["Josh Crews"]
+  s.authors = ["Josh Crews", "Jeremy Linder"]
   s.date = "2014-09-11"
   s.description = "Ruby-wrapper for Google Directions API.  Can return the drive time and driving distance between to places"
   s.email = "josh@joshcrews.com"
