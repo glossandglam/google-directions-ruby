@@ -20,7 +20,7 @@ class GoogleDirections
   def initialize(origin, destination, opts={})
     @origin = origin
     @destination = destination
-    @options = @@default_options.merge(opts).merge({:origin => @origin, :destination => @destination})
+    @options = @@default_options.merge(opts).merge({:origin => @origin, :destination => @destination, :key => GOOGLE_MAPS_API_KEY})
 
     @url = @@base_url + '?' + @options.to_query
     @xml = open(@url).read
